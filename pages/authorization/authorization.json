@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "van-swipe-cell": "/dist/swipe-cell/index"
+  }
+}

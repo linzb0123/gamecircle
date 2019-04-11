@@ -1,0 +1,9 @@
+<!--pages/authorization/authorization.wxml-->
+<view class="container">
+  <view class="au">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" type="primary" > 点击授权登录 </button>
+    <block wx:else>
+      <text class="text">您已经授权过了</text>
+    </block>
+  </view>
+</view>

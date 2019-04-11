@@ -1,0 +1,51 @@
+<!--pages/message/message.wxml-->
+<view class='container'>
+<image class="head-img" src="{{headimgurl}}" bindtap='tootherinfo'></image>
+<text class='nickName'>{{nickname}}</text>
+  <scroll-view scroll-y="true" scroll-top="{{scrolltop}}"  class='scroll'>
+<view wx:for="{{messagess}}" wx:for-item="i" wx:key="*this">
+<block wx:if="{{i.me}}">
+ <view class='item'>
+      <view class='time'> {{i.time}}</view>
+      <view class='right-message' >
+        <text>{{i.content}}</text>
+      </view>
+    </view>
+</block>
+<block wx:else>
+ <view class='item'>
+      <view class='time'> {{i.time}}</view>
+      <view class='left-message' >
+        <text>{{i.content}}</text>
+      </view>
+    </view>
+</block>
+</view>
+  
+</scroll-view>
+<!-- <view class="inpuarea">
+  <van-field
+  input-class="area"
+    value="{{ content }}"
+    type="textarea"
+    placeholder="请输入消息"
+    autosize
+    border="{{ false }}"
+    use-button-slot
+    cursor-spacing="20"
+    bind:input="messageInput"
+  >
+   <van-button slot="button" size="small" type="primary" bind:click="send">发送</van-button>
+   </van-field>
+</view> -->
+<!-- <form bindsubmit="send"> -->
+ <view class="inputReply" >
+    <textarea class="replyMessage" auto-height="{{ true }}" focus="{{ isfocus }}" bindinput="messageInput" show-confirm-bar="{{ false }}" cursor-spacing="20" placeholder="请输入" value="{{ content }}" fixed="{{ true }}" maxlength='400'></textarea>
+    <button class="makeSure"   type="primary" bindtap='send' >发送</button>
+  </view>
+    <!-- <textarea placeholder="form 中的 textarea" name="textarea" />
+    <button form-type="submit">提交</button> -->
+  <!-- </form> -->
+
+</view>
+

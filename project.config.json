@@ -1,0 +1,155 @@
+{
+	"description": "项目配置文件。",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.98",
+	"appid": "wxd9af1fefaa6994b1",
+	"projectname": "gamecircle",
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 18,
+			"list": [
+				{
+					"id": 0,
+					"name": "userinfo",
+					"pathName": "pages/userinfo/userinfo",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "youxiquan",
+					"pathName": "pages/youxiquan/youxiquan",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "postDetails",
+					"pathName": "pages/post_details/postDetails",
+					"query": "type=2&&id=1"
+				},
+				{
+					"id": 3,
+					"name": "message",
+					"pathName": "pages/message/message",
+					"query": "uid=10"
+				},
+				{
+					"id": -1,
+					"name": "authorization",
+					"pathName": "pages/authorization/authorization",
+					"query": ""
+				},
+				{
+					"id": 6,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "log",
+					"pathName": "pages/logs/logs",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "私信列表",
+					"pathName": "pages/private_letter/privateLetter",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "测试",
+					"pathName": "pages/test/test",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "privateLetter",
+					"pathName": "pages/private_letter/privateLetter",
+					"query": ""
+				},
+				{
+					"id": 10,
+					"name": "intime",
+					"pathName": "pages/intime/index",
+					"query": "isAll=1&&gameId=1"
+				},
+				{
+					"id": 11,
+					"name": "longterm",
+					"pathName": "pages/longterm/longterm",
+					"query": "isAll=&&gameId=1"
+				},
+				{
+					"id": -1,
+					"name": "longterm",
+					"pathName": "pages/intime/index",
+					"query": "isAll=&&gameId=1"
+				},
+				{
+					"id": -1,
+					"name": "intime",
+					"pathName": "pages/intime/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "other-userinfo",
+					"pathName": "pages/other-userinfo/other-userinfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "longpost",
+					"pathName": "pages/longpost/longpost",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "befocus",
+					"pathName": "pages/befocususers/befocususers",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pulish",
+					"pathName": "pages/publish/publish",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "icno",
+					"pathName": "pages/icon/icon",
+					"query": ""
+				}
+			]
+		}
+	}
+}

@@ -1,0 +1,97 @@
+<!--pages/other-userinfo/other-userinfo.wxml-->
+<van-toast id="van-toast" />
+<!-- 关注弹窗  -->
+<view class="container">
+  <view class='chat'>
+    <van-button custom-class='chatbutton' type="danger" round bind:click="tomessage" data-uid="{{userId}}">私信</van-button>
+  </view>
+  <view class='rim'>
+    <image class='head-img' mode='scaleToFill' src="{{ result.headimgurl }}"></image>
+  </view>
+
+  <view class='userwindow'>
+    <view class='fllow_passage'>
+      <view class='follownum'>粉丝数:{{ concernNum }}
+      </view>
+      <view> | </view>
+      <view bindtap='toPost' class='passagenum'>发帖数:{{postNum}}
+      </view>
+    </view>
+    <view>
+      <text class='textname'>
+        昵称：
+      </text>
+      <text class='name'>
+        {{result.username}}
+      </text>
+    </view>
+    <view>
+      <text class='textsex'>
+        性别：
+      </text>
+      <text class='sex'>
+        {{result.sex}}
+      </text>
+    </view>
+    <view>
+      <text class='textaddress'>
+        位置：
+      </text>
+      <text class='address'>
+        {{result.location}}
+      </text>
+    </view>
+    <view>
+      <text class='textgame'>
+        主玩游戏：
+      </text>
+      <text class='game' wx:for="{{ result.games }}" wx:key="id" wx:item="{{ item }}">
+        {{games}}   
+      </text>
+    </view>
+    <view wx:if="{{ games.length < 17 }}">
+      <view>
+        <text class='top_720 textsignature'>
+        签名：
+      </text>
+        <text class='top_720 signature'>
+        {{info}}
+      </text>
+      </view>
+    </view>
+    <view wx:else>
+      <view>
+        <text class='top_800 textsignature'>
+        签名：
+      </text>
+        <text class='top_800 signature'>
+        {{info}}
+      </text>
+      </view>
+    </view>
+
+
+
+  </view>
+
+  <view class="focus">
+    <button class="{{ifFocus?'hide':'show'}}" disabled="{{disabled}}" plain='true' bindtap="focus">
+      <image mode='scaleToFill' src='../../image/add.jpg'></image>
+    </button>
+    <van-popup show="{{ show.top }}" position="top" overlay="{{ false }}" custom-class="top" bind:close="focus">
+      关注成功
+    </van-popup>
+
+    <button class="{{ifFocus?'show':'hide'}}" disabled="{{disabled}}" plain='true' bindtap="nofocus">
+      <image mode='scaleToFill' src='../../image/delete.jpg'></image>
+    </button>
+    <van-popup show="{{ show.top2 }}" position="top" overlay="{{ false }}" custom-class="top" bind:close="nofocus">
+      取消关注
+    </van-popup>
+  </view>
+
+
+
+
+
+</view>

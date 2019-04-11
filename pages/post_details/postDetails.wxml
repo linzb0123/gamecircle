@@ -1,0 +1,39 @@
+<view class="container">
+  <van-toast id="van-toast" />
+  <view class="body">
+    <view class="main_post">
+      <view class="top-content">
+        <navigator url="../other-userinfo/other-userinfo?userId={{ posterId }}">
+          <image class="headImg" mode='scaleToFit' src="{{ posterHeadurl }}"></image>
+        </navigator>
+        <view class="userInfo">
+          <view class="username">{{ posterName }}</view>
+          <view class="time">发布于：{{ posterTime }} </view>
+        </view>
+      </view>
+      <view class="bottom-content">
+        <text class="message" style="border:none;">{{ posterMessage }}</text>
+      </view>
+    </view>
+    <!-- 回帖一 -->
+    <view class="post_reply" wx:for="{{ replies }}" wx:item="{{ item }}" wx:key="userId">
+      <view class="top-content">
+        <navigator url="../other-userinfo/other-userinfo?userId={{ item.userId }}">
+          <image class="headImg" mode='scaleToFit' src="{{ item.head }}"></image>
+        </navigator>
+        <view class="userInfo">
+          <view class="username">{{ item.replyUserName }}</view>
+          <view class="time">发布于：{{ item.createTime }} </view>
+        </view>
+      </view>
+      <view class="bottom-content">
+        <text class="message">{{ item.message }}</text>
+      </view>
+    </view>
+  </view>
+  <view class="inputReply">
+    <textarea class="replyMessage" auto-height="{{ true }}" focus="{{ false }}" bindinput="valueChange" show-confirm-bar="{{ false }}" cursor-spacing="{{ space }}" placeholder="请畅所欲言...." value="{{ comment }}" fixed="{{ true }}" maxlength='500'></textarea>
+    <button class="makeSure" disabled="{{ isable }}" bindtap="makeSure" type="{{ btnType }}">发表</button>
+  </view>
+
+</view>

@@ -1,0 +1,16 @@
+<!--pages/icon/icon.wxml-->
+<view class='container'>
+    <view class='icon'>
+      <image class='image' src='../../image/icon2.png'></image>
+    </view>
+
+    <view class='line'>
+    </view>
+
+    <view class='words'>
+      <view class='word'>
+        <view class='youxiquan'>游戏圈</view>
+        <view>GAME COMMUNITY</view>
+      </view>
+    </view>
+</view>

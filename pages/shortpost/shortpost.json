@@ -1,0 +1,7 @@
+{
+  "pages": [
+    "pages/shortpost/shortpost",
+    "pages/longpost/longpost",
+    "pages/logs/logs"
+  ]
+}

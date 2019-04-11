@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- 
+<view>
+  <image class="avatar" style='margin-left=10rpx;margin-top:10rpx;' src='{{userInfo.avatarUrl}}'></image>
+  <view class="nickname">{{userInfo.nickName}}</view>
+</view>
+-->
+
+  <navigator wx:if="{{ isAll != 1 }}" url="../publish/publish?type=2&&gameId={{gameId}}" class='add_icon'>
+    <image class='floatbutton' src='../../image/icon-pencil.png'></image>
+  </navigator>
+
+
+
+  <view class='selection'>
+    <image class='selection1' src='../../image/selection2.png'></image>
+    <view class='selection2'>
+      <!-- <view bindtap='intime_tap'>此刻消息</view> -->
+      <navigator open-type="redirect" url="../intime/index?isAll={{isAll}}&&gameId={{gameId}}">此刻信息</navigator>
+      <view>长期消息</view>
+    </view>
+  </view>
+
+  <view class='single_note'>
+
+    <view class='single' wx:for="{{ result.data }}" wx:key="id" wx:item="{{ item }}">
+      <view id="{{item.id}}" catchtap='toDetail'>
+        <view catchtap='toOtherUserInfo' id="{{item.userId}}" class='photo'>
+          <image class='touxiang' src="{{ item.user.headimgurl }}"></image>
+        </view>
+        <view class='name_content'>
+          <view class="gameType" wx:if="{{ isAll == 1 }}">类型：{{item.game.gameName}}</view>
+          <view class='note_name'>{{ item.user.username }}</view>
+          <view class='note_time'>发布于：{{ item.createTime }}</view>
+          <view class='note_content'>{{ item.message }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

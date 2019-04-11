@@ -1,0 +1,9 @@
+
+var getUserInfoFromStorage = function(userId){
+  let userInfo = wx.getStorageSync("user"+userId)
+  if(!userInfo){
+    userInfo
+  }
+
+
+}

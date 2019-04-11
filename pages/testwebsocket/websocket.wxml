@@ -1,0 +1,10 @@
+<!--pages/testwebsocket/websocket.wxml-->
+<view class="page">
+  <view class="page__hd">
+  </view>
+  <view class="page__bd">
+
+  <button bindtap="connectWebsocket" type="primary">连接websocket</button>
+
+  </view>
+</view>

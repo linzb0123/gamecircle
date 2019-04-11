@@ -1,0 +1,54 @@
+<!--pages/shortpost/shortpost.wxml-->
+<view class="container">
+
+  <!-- <view>
+  <image class="avatar" style='margin-left=10rpx;margin-top:10rpx;' src='{{userInfo.avatarUrl}}'></image>
+  <view class="nickname">{{userInfo.nickName}}</view>
+</view> -->
+
+
+  <view class='selection'>
+    <image class='selection1' src='../../image/selection1.png'></image>
+    <view class='selection2'>
+      <view>即时消息</view>
+      <navigator url="../longpost/longpost?userId={{ userId }}">长期消息</navigator>
+    </view>
+  </view>
+
+
+  <view class='single_note'>
+    <view wx:if="{{ role == 1 }}">
+      <view  wx:for="{{ result.data }}" wx:key="id" wx:item="{{ item }}">
+        <view class='single' wx:if="{{ item.status != 2 }}">
+          <view bindtouchstart='touchStart' bindtouchend='touchEnd' bindlongtap='deletePost' bindtap='intoPost' id="{{ item.id }}" >
+            <view class='photo'>
+              <image class='touxiang' src="{{ item.user.headimgurl }}"></image>
+            </view>
+            <view class='name_content'>
+              <view class="gameType">类型：{{item.game.gameName}}</view>
+              <view class='note_name'>{{ item.user.username }}</view>
+              <view class='note_time'>剩余时间：{{ item.photo }}</view>
+              <view class='note_content'>{{ item.message }}</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view wx:else>
+      <view class='single' wx:for="{{ result.data }}" wx:key="id" wx:item="{{ item }}">
+        <view id="{{item.id}}" catchtap='toDetail' >
+          <view catchtap="toOtherInfo"  class='photo' id="{{item.userId}}" >
+            <image class='touxiang' src="{{ item.user.headimgurl }}"></image>
+          </view>
+          <view class='name_content'>
+            <view class="gameType">类型：{{item.game.gameName}}</view>
+            <view class='note_name'>{{ item.user.username }}</view>
+            <view class='note_time'>剩余时间：{{ item.photo }}</view>
+            <view class='note_content'>{{ item.message }}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>

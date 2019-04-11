@@ -1,0 +1,151 @@
+/* pages/userinfo/userinfo.wxss */
+.container{
+  background-color: #4dac96;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+.rim .head-img {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  display:block;
+  overflow:hidden;
+  margin: 10rpx;
+}
+.rim{
+  background-color: #fff;
+  width: 240rpx;
+  height: 240rpx;
+  line-height: 100rpx;
+  position:absolute;
+  border-radius: 50%;
+  top: 30rpx;
+  left:255rpx ;
+  z-index: 2;
+}
+.userwindow{
+  background-color: #fff;
+  width: 90%;
+  height: 85%;
+  position:relative;
+  top: 0rpx;
+  /* z-index: 1; */
+  border-radius: 5%;
+  box-shadow: 0px 2px  0.1px 0.1px #4dac96;
+  /* padding-top: 150rpx; */
+}
+.edit{
+  width:750rpx;
+  height:130rpx;
+  z-index: 4
+
+}
+.edit .editbutton{
+  position:absolute;
+  right: 5%;
+  top:50rpx;
+  width: 130rpx;
+  height: 50rpx;
+  background-color: #fff;
+  color: #4dac96;
+  border: 0rpx;
+  line-height: 50rpx;
+  font-size: 15px;
+}
+.line{
+  color:#4dac96;
+  position:relative;
+  margin: 20rpx 0rpx 0rpx 60rpx;
+  font-size: 20px;
+  width: 75%;
+}
+.text{
+  color:#4dac96; 
+  font-size: 20px;
+}
+.text1{
+  position: relative;
+  color: #7d7e80;
+}
+.inputtext{
+  font-size: 20px;
+}
+.left{
+  position: relative;
+  left: 32rpx;
+}
+.left2{
+  position: relative;
+  left:40rpx;
+}
+.height{
+  height: 80rpx;
+}
+.top{
+  position: relative;
+  top:25rpx;
+}
+.top1{
+  position: relative;
+  top: 19rpx;
+}
+.bottom{
+  position: relative;
+  bottom: -25rpx;
+}
+.box .hide{
+ display: none;
+}
+.box .show{ 
+ display: block;
+}
+.box{
+  margin-top: 160rpx;
+}
+.radio1{
+  position: relative;
+  top:-52rpx;
+  left:150rpx;
+}
+.radio2{
+  position: relative;
+  top:-96rpx;
+  left:260rpx;
+
+}
+.container .focus{
+  position:absolute;
+  left: 255rpx;
+  bottom: 0rpx;
+  color: #4dac96;
+  font-size: 18px;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 220rpx;
+}
+
+.fllow_passage{
+  margin-top: -165rpx;
+  width: 100%;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  font-size: 30rpx;
+  color: gray;
+  padding-top: 100rpx;
+}
+
+.follownum{
+  display: flex;
+  flex-direction: row;
+}
+
+.passagenum{
+  display: flex;
+  flex-direction: row;
+}

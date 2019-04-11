@@ -1,0 +1,62 @@
+/* pages/focusgame/focusgame.wxss */
+.focus{
+
+  width: 760rpx;
+  height: 100rpx;
+  float: left;
+  margin-top: 60rpx;
+  font-size: 20px;
+
+}
+.nofocus{
+
+  width: 760rpx;
+  height: 100%;
+  float: left;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.box1{
+  width: 690rpx;
+  position: relative;
+  left: 40rpx;
+}
+.game{
+  width:300rpx;
+  float: left;
+  margin:20rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 15px;
+  border-radius: 30rpx;
+}
+
+.focus .changebutton{
+  position: relative;
+  width: 150rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #4dac96;
+  font-size: 16px;
+  background-color: #fff;
+  left: 550rpx;
+  top:-60rpx;
+}
+.text{
+  position: relative;
+  left: 45rpx;
+  width:400rpx;
+  color: white;
+  font-size: 20px;
+}
+.game .hide{
+  display: none;
+}
+.game .icon{
+  position: absolute;
+  width: 10rpx;
+  left: 15rpx;
+  top:30rpx;
+  color: #4dac96;
+}
+

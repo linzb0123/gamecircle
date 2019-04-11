@@ -1,0 +1,32 @@
+<!--pages/focususers/focususers.wxml-->
+<view class='top'>关注人</view>
+<view class='box'>
+  <van-toast id="van-toast" /> <!-- 关注弹窗  -->
+  <view wx:for="{{result}}" wx:item="{{ item }}" wx:key='id'>
+    <view  id="{{ item.id }}" right-width="{{ 50 }}">
+      <van-cell-group>
+        <navigator class="letter" url='../other-userinfo/other-userinfo?userId={{item.id}}'>
+          <view class="letter-top">
+            <image class="headImg" mode='scaleToFit' src="{{item.headimgurl}}"></image>
+            <view class="info">
+              <view class="mg-top-10"></view>
+              <text class="username">{{item.username}}</text>
+              <view  wx:if="{{ item.info == ''|| item.info==null}}">
+                  <view class="signature" wx:if="{{ item.info == ''|| item.info==null}}">暂无</view>
+              </view>
+              <view wx:else>
+               <view class="signature" wx:if="{{ item.info != ''}}">{{item.info}}</view>
+              </view>
+             
+              
+            </view>
+          </view>
+          <view class="letter-bottom"></view>
+        </navigator>
+      </van-cell-group>
+      <!-- <view class="delSize" slot="right">取消\n关注</view> -->
+    </view>
+  </view>
+  <view class='bottom'></view>
+</view>
+<van-dialog id="van-dialog" />

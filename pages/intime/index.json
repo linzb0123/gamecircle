@@ -1,0 +1,7 @@
+{
+  "pages": [
+  "pages/intime/index",
+  "pages/longterm/longterm",
+  "pages/logs/logs"
+  ]
+}

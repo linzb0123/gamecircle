@@ -1,0 +1,58 @@
+<!--pages/index/index.wxml-->
+<view class='window'>
+  <view class='user' bindtap="bindUserInfoViewTap" >
+    <van-button custom-class='rim' >
+      <image class='head-img' mode='scaleToFill' src="{{userInfo.headimgurl}}"></image>
+    </van-button>
+    <view class='username'>
+      {{userInfo.nickname}}
+    </view>
+  </view>
+
+    <scroll-view  scroll-x  class='focus-game' style="width: 100%;overflow:hidden;">
+    <!-- <view class='game'>
+      <view class='rectangle'>
+        <van-button  custom-class='circle' plain='true' bindtap="">
+          <image class='pacture' mode='scaleToFill' src='../../image/head.jpg'></image>
+        </van-button> 
+      </view>
+      <view class='triangle'></view>
+    </view> -->
+
+<block wx:for="{{focusGames}}" wx:for-item='game' wx:key='id'>
+   <view class='game'  bindtap='intoyxq' data-gameId = '{{game.id}}'>  
+      <view class='rectangle'>
+        <image  class='back' src='../../image/game.jpg' mode='scaleToFill'></image>
+        <van-button  custom-class='circle' plain='true' bindtap="">
+          <image class='pacture' mode='scaleToFill' src='{{game.photo}}'></image>
+        </van-button> 
+      </view>
+      <!-- <view class='triangle'></view> -->
+    </view>
+</block>
+    <!-- focusGames -->
+
+
+    <view class='game'>
+      <view class='rectangle'>
+        <image  class='back' src='../../image/game.jpg' mode='scaleToFill'></image>
+        <van-button  custom-class='circle' plain='true' bindtap="addgame">
+          <image class='pacture' mode='scaleToFill' src='../../image/add.jpg'></image>
+        </van-button>
+      </view>
+      <!-- <view class='triangle'></view> -->
+    </view>
+
+  </scroll-view>
+  
+  <view class='bottom'>
+    <van-button custom-class='focus'   bind:click='toInstantNews' >
+    关注动态
+    </van-button>
+
+    <van-button custom-class='message' bind:click='bindPLViewTap'>
+    消息盒子
+    </van-button>
+  </view>
+
+</view>

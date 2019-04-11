@@ -1,0 +1,4 @@
+/* pages/authorization/authorization.wxss */
+.au{
+  margin-top: 48%;
+}

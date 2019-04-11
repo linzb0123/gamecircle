@@ -1,0 +1,141 @@
+.container{
+  width: 95%;
+  height: 100%;
+  position: relative;
+  margin: 100rpx auto 0;
+  background-color: white;
+  border-radius: 40rpx;
+}
+.head-img {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  display:block;
+  overflow:hidden;
+  margin: 10rpx;
+  position: absolute;
+  top: -110rpx;
+  left: -10rpx;
+  z-index: 999999;
+  border:20rpx solid white;
+}
+.nickName{
+  position: absolute;
+  top: 50rpx;
+  font-size:17px;
+  left: 330rpx
+}
+.scroll{
+  position: relative;
+  height:800rpx;
+  margin-top: 140rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: white;
+  white-space: pre-wrap;
+}
+.inpuarea{
+position: relative;
+/* min-height: 100rpx; */
+ width: 100%;
+ /* border-radius:5%; */
+ border:1rpx solid rgb(240, 239, 239);
+ margin: 0;
+ /* bottom: -70rpx; */
+}
+.inpuarea .area{
+  border-radius:40rpx;
+  background-color: rgb(240, 239, 239);
+  font-size:15px;
+  padding: 5rpx 30rpx;
+  min-height: 70rpx;
+  line-height: 10px;
+}
+.item{
+  position: relative;
+  width: 100%;
+  display: block;
+}
+.time{
+  display: flex;
+  /* width: 300rpx; */
+  position: relative;
+  margin: 5rpx auto;
+  /* align-items: center; */
+  font-size: 35rpx;
+  color: gray;
+  justify-content: center; 
+  clear: both;
+}
+.item .left-message{
+  display: block;
+  float: left;
+  /* min-width: 300rpx; */
+  white-space: pre-line;
+  border-radius: 40rpx 40rpx 40rpx 0;
+  background-color: rgb(239, 240, 239);
+  line-height: 50rpx;
+  /* height: 60rpx; */
+  padding: 20rpx;
+  font-family: '微软雅黑';
+  word-break: break-all;
+  max-width: 75%;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+.item .right-message{
+  display: block;
+  float: right;
+  /* min-width: 300rpx; */
+  white-space: pre-line;
+  border-radius: 40rpx 40rpx 0 40rpx;
+  background-color: rgb(12, 241, 12);
+  line-height: 50rpx;
+  /* height: 60rpx; */
+  padding: 20rpx;
+  font-family: '微软雅黑';
+  word-break: break-all;
+  max-width: 75%;
+  margin-right: 35rpx;
+}
+.text{
+  background-color: royalblue;
+}
+.inputReply{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  min-height: 100rpx;
+  background-color:white;
+  border-radius:0;
+  display: flex;
+  justify-content: center;
+}
+.inputReply::after{
+ border-radius: 0;
+}
+.inputReply .replyMessage{
+  width:65%;
+  font-size:17px;
+  min-height:60rpx;
+  height:auto;
+  max-height: 1000rpx;
+  padding-left:30rpx;
+  padding-right:30rpx;
+  padding-top:20rpx;
+  margin-top:15rpx;
+  margin-bottom:15rpx;
+  margin-right:20rpx;
+  margin-left:20rpx;
+  background-color: rgb(240, 239, 239);
+  border-radius: 40rpx;
+}
+.inputReply .makeSure{
+  width:auto;
+  height: 60rpx;
+  padding:auto 10rpx;
+  margin:auto 10rpx;
+  font-size:16px;
+  line-height:60rpx;
+  border:none;
+}

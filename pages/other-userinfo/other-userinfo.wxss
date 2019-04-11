@@ -1,0 +1,232 @@
+/* pages/other-userinfo/other-userinfo.wxss */
+.container{
+  background-color: #4dac96;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+.rim .head-img {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  display:block;
+  overflow:hidden;
+  margin: 10rpx;
+}
+.rim{
+  background-color: #fff;
+  width: 240rpx;
+  height: 240rpx;
+  line-height: 100rpx;
+  position:absolute;
+  border-radius: 50%;
+  top: 30rpx;
+  left:255rpx ;
+  z-index: 2;
+}
+.userwindow{
+  background-color: #fff;
+  width: 90%;
+  height: 85%;
+  margin: 0 auto;
+
+  /* position:absolute;
+  top: 150rpx; */
+  z-index: 1;
+  border-radius: 5%;
+  box-shadow: 0px 0px 0.1px 0.1px black;
+}
+.userwindow .textname{
+  position:absolute;
+  left: 140rpx;
+  top: 320rpx;
+  font-size: 20px;
+  color: #4dac96;
+}
+.userwindow .name{
+  color: #4dac96;
+  font-size: 20px;
+  position:absolute;
+  left: 250rpx;
+  top: 320rpx;
+}
+.userwindow .textsex{
+  position:absolute;
+  left: 140rpx;
+  top: 420rpx;
+  font-size: 20px;
+  color: #4dac96;
+}
+.userwindow .sex{
+  color: #4dac96;
+  font-size: 20px;
+  position:absolute;
+  left: 250rpx;
+  top: 420rpx;
+}
+.userwindow .textaddress{
+  position:absolute;
+  left: 140rpx;
+  top: 520rpx;
+  font-size: 20px;
+  color: #4dac96;
+}
+.userwindow .address{
+  color: #4dac96;
+  font-size: 20px;
+  position:absolute;
+  left: 250rpx;
+  top: 520rpx;
+}
+.userwindow .textgame{
+  position:absolute;
+  left: 140rpx;
+  top: 620rpx;
+  font-size: 20px;
+  color: #4dac96;
+  
+}
+.userwindow .game{
+  color: #4dac96;
+  font-size: 20px;
+  position:absolute;
+  left: 330rpx;
+  top: 620rpx;
+  width:50%;
+  text-overflow:ellipsis;
+  overflow:hidden;
+  word-wrap: break-word;
+  display: -webkit-box;
+  white-space: normal !important;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.userwindow .textsignature{
+  position:absolute;
+  left: 140rpx;
+  /* top: 720rpx; */
+  font-size: 20px;
+  color: #4dac96;
+}
+.userwindow .signature{
+  color: #4dac96;
+  font-size: 20px;
+  position:absolute;
+  left: 250rpx;
+  /* top: 720rpx; */
+  width: 400rpx;
+}
+
+.focus{
+  background-color: #fff;
+  border-radius: 50%;
+  position: fixed;
+  width: 100rpx;
+  height: 100rpx;
+  left: 325rpx;
+  bottom: 0rpx;
+  z-index: 4;
+  background-size: 100%;
+  box-shadow: 0px 2px  0.1px 0.1px #4dac96;
+}
+.focus button{
+  top:5rpx;
+  width: 90rpx;
+  height:90rpx;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+}
+
+.focus image{
+  top:5rpx;
+  width: 90rpx;
+  height:90rpx;
+  border-radius: 50%;
+  display:block;
+  overflow:hidden;
+  margin: 0;
+  border: 0;
+}
+
+.top {
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  border-radius: 0;
+  line-height: 20px;
+  background-color: rgba(0, 0, 0, 0.8)!important;
+}
+.chat{
+  width:750rpx;
+  height:150rpx;
+}
+.chat .chatbutton{
+  position:absolute;
+  right: 5%;
+  top:50rpx;
+  width: 130rpx;
+  height: 50rpx;
+  background-color: #fff;
+  color: #4dac96;
+  border: 0rpx;
+  line-height: 50rpx;
+  font-size: 15px;
+}
+ .hide{
+  display: none;
+}
+.show{
+  display:block;
+
+}
+.rotate{
+  animation: front 2s linear 1;
+  backface-visibility: hidden;
+}
+@keyframes front{
+  from {      
+    transform: rotate(0deg);
+    }
+  to {
+    transform: rotate(45deg);
+    }
+}
+
+.fllow_passage{
+  margin-top: -165rpx;
+  width: 100%;
+  /* justify-content: space-around; */
+  display: flex;
+  /* flex-direction: row; */
+  font-size: 30rpx;
+  color: gray;
+  padding-top: 100rpx;
+  position:relative;
+  left:200rpx;
+  top:200rpx;
+}
+
+.follownum{
+  display: flex;
+  flex-direction: row;
+  margin-right:20rpx;
+}
+
+.passagenum{
+  margin-left:20rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.top_720{
+  top:720rpx;
+}
+
+.top_800{
+  top:740rpx;
+}

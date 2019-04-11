@@ -1,0 +1,139 @@
+/* pages/publish/publish.wxss */
+page{
+  background-color: #4DAC96;
+}
+
+.wechatinfo{
+  position: absolute;
+  top: 10rpx;
+  width: 400rpx;
+  height: 120rpx;
+  left: 35rpx;
+  background-color: white;
+  /* margin-bottom:50rpx;
+  padding-bottom:50rpx; */
+  border-top-right-radius: 100rpx;
+  border-top-left-radius: 100rpx;
+  border-bottom-left-radius: 100rpx;
+  border-bottom-right-radius: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+
+.textarea{
+   position: absolute;
+  top: 140rpx;
+  width: 90%;
+  height: 82%;
+  background-color: white;
+  margin-bottom:50rpx;
+  padding-bottom:50rpx;
+  
+  border-top-right-radius: 50rpx;
+  border-top-left-radius: 50rpx;
+  border-bottom-left-radius: 50rpx;
+  border-bottom-right-radius: 50rpx;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  left: 5%
+}
+
+.detailText{
+  position: relative;
+  left: 45rpx;
+  top: 30rpx;
+  height: 90%;
+}
+
+.time_end{
+  position: relative;
+  left: 45rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+}
+
+.publisher{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 40rpx;
+  /* width: 130rpx; */
+  height: 50rpx;
+  line-height: 50rpx;
+  right: 35rpx;
+  background-color: white;
+  /* margin-bottom:50rpx;
+  padding-bottom:50rpx; */
+  border-top-right-radius: 100rpx;
+  border-top-left-radius: 100rpx;
+  border-bottom-left-radius: 100rpx;
+  border-bottom-right-radius: 100rpx;
+}
+
+
+
+.usrtouxiang{
+  overflow: hidden;
+  position: relative;
+  width: 120rpx;
+  height: 120rpx;
+  background-color: rgb(212, 212, 212);
+  border-radius: 50%;  
+
+}
+
+.usrname{
+  position: relative;
+  right: -30rpx;
+}
+
+.gamename{
+  display: flex;
+  justify-content: center;
+  color: rgb(179, 179, 179);
+  padding-bottom: 20rpx;
+  font-size: 30rpx;
+}
+
+.section{
+  padding-left: 20rpx;
+   color: gray;
+   /* margin:20rpx;
+   padding:20rpx */
+
+}
+
+
+.clock{
+  width: 35rpx;
+  height: 35rpx;
+  margin-left: 30rpx;
+  margin-top: 5rpx;
+}
+.select{
+  width: 100rpx;
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 16px;
+  padding: 0;
+  margin-right:200rpx;
+  margin-left: 0rpx;
+  border-radius: 10rpx;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: flex;
+  flex-direction: row;
+}
+
+
+

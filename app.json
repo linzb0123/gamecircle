@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/userinfo/userinfo",
+    "pages/post_details/postDetails",
+    "pages/message/message",
+    "pages/authorization/authorization",
+    "pages/private_letter/privateLetter",
+    "pages/test/test",
+    "pages/other-userinfo/other-userinfo",
+    "pages/focusgame/focusgame",
+    "pages/intime/index",
+    "pages/focususers/focususers",
+    "pages/longpost/longpost",
+    "pages/shortpost/shortpost",
+    "pages/longterm/longterm",
+    "pages/publish/publish",
+    "pages/befocususers/befocususers",
+    "pages/icon/icon"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "backgroundColor": "#4dac96",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "游戏圈",
+    "navigationBarTextStyle": "black"
+  },
+  "usingComponents": {
+    "van-button": "../dist/button/index",
+    "van-popup": "../dist/popup/index",
+    "van-field": "../dist/field/index",
+    "van-radio": "../dist/radio/index",
+    "van-radio-group": "../dist/radio-group/index",
+    "van-cell-group": "../dist/cell-group/index",
+    "van-dialog": "../dist/dialog/index",
+    "van-icon": "../dist/icon/index",
+    "van-swipe-cell": "../dist/swipe-cell/index"
+  }
+}

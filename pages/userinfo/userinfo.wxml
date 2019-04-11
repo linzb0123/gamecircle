@@ -1,0 +1,88 @@
+<!--pages/userinfo/userinfo.wxml-->
+
+<view class="container">
+  <view class='edit'>
+    <van-button custom-class='editbutton' type="danger" round bind:click='change'>{{    btnName}}</van-button>
+  </view>
+  <view class='rim' >
+    <image class='head-img' mode='scaleToFill' src="{{userInfo.headimgurl}}"></image>
+  </view>
+  <view class='userwindow'>
+
+    <view class='box'> 
+
+    <view class='fllow_passage'>
+        <view class='follownum' bindtap='intoBeconcern'>粉丝数：
+        <view>{{concernCount}}</view></view>
+        <navigator class='passagenum' open-type="redirect" url="../shortpost/shortpost?userId=">发帖数：{{focCount}}</navigator>
+      </view>
+
+
+
+    <view class='line '>
+      
+     
+      <van-field input-class="inputtext" 
+            value="{{ userInfo.nickname }}"
+            placeholder="请输入昵称"
+            border="{{ false }}"
+            bind:input="changeName"
+            title-width="60px"
+            disabled="{{true}}"
+            maxlength="7"      
+          >
+          <text slot="label" class='text'>昵称：</text>  
+      </van-field>
+    </view>
+    
+    <view class='line height'>
+        <text class='text left'>性别：</text>
+        <text class="{{true?'text1 left2':'hide'}}">{{userInfo.sex==1?'男':userInfo.sex==2?'女':'保密'}}</text>
+       <van-radio-group 
+          value="{{ radio1 }}"
+          data-key="radio1"
+          custom-class="demo-radio-group"
+          bind:change="radioOnChange"
+        >
+          <van-radio name="1" custom-class="{{true?'hide':'radio1 '}}" checked-color="#4dac96">男</van-radio>
+          <van-radio name="2" custom-class="{{true?'hide':'radio2 '}}" checked-color="#4dac96">女</van-radio>
+        </van-radio-group>  
+    </view>
+
+    <view  class='line'>
+      <text class='text left'>位置：</text>
+      <text class='text1 left2'>{{userInfo.location}}</text>
+    
+    </view>
+    
+        
+    <view class='line top'>    
+      <text class='text left'>主玩游戏：</text>
+      <text class='text1 left2'>{{game}}</text>
+    </view>
+    
+     
+    <view class='line top'>
+      <text class='text left top'>个性签名：</text>
+      <view class='top1'><van-field input-class="inputtext" 
+        value="{{ userInfo.info }}"
+        placeholder="请输入个性签名"
+        border="{{ false }}"
+        bind:input="changeSignature"
+        title-width="100px"
+        disabled="{{showView}}"
+        maxlength="50"
+        type="textarea"
+        show-confirm-bar = "{{ false }}" 
+        autosize      
+        >
+      </van-field>
+      </view>
+    </view>
+    
+   </view>
+   
+  </view>
+  <van-toast id="van-toast" /> <!-- 关注弹窗  -->
+  <navigator open-type='navigate' url='../focususers/focususers'><van-button custom-class='focus' round bind:click='focusUser'>关注列表</van-button></navigator>
+</view>

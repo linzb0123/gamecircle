@@ -1,0 +1,48 @@
+<view class='container'>
+  <view class='wechatinfo'>
+    <view class='usrtouxiang'>
+      <open-data type="userAvatarUrl"></open-data>
+    </view>
+    <view class='usrname'>
+      <open-data type="userNickName" lang="zh_CN"></open-data>
+    </view>
+  </view>
+
+  <button class='publisher' bindtap='makeTrue'>
+    发布
+  </button>
+
+  <view class='textarea'>
+    <view class='gamename'>
+    {{ gameName }}
+    </view>
+
+
+
+    <view class='time_end'>
+      <button class='select' bindtap='select'>{{buttonName}}</button>
+      <view class="{{short?'show':'hide'}}" >
+        <text>持续时间</text>
+        <image class='clock' src='../../image/clock.jpg'></image>
+        <view class="section">  
+          <!-- <picker mode="time" value="{{time}}" start="00:00" end="23:59" bindchange="bindTimeChange">   -->
+          <picker mode="multiSelector" range="{{array}}" bindchange='bindTimeChange' >
+            <view class="picker"> {{array[0][time[0]]}}:{{array[1][time[1]]}}</view>  
+          </picker>  
+        </view> 
+      </view> 
+    </view>
+
+
+    <textarea 
+        class="detailText" 
+        placeholder="说点什么吧……"
+        bindinput="bindTextAreaBlur"
+        maxlength='-1'
+        show-confirm-bar = "{{ false }}" 
+        value="{{details}}">
+    </textarea>
+  </view>
+
+</view>
+<van-toast id="van-toast" />

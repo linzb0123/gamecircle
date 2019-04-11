@@ -1,0 +1,8 @@
+<!--pages/test/test.wxml-->
+<view class="body">
+  <image class="img" src="/image/headImg1.jpg" mode='scaleToFit' ></image>
+
+  <view class="myFirst"></view>
+
+  <view class="box"></view>
+</view>

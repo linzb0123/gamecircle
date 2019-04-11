@@ -1,0 +1,138 @@
+/* pages/index/index.wxss */
+.window{
+  background-color: #eceee9;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;/*垂直居中*/
+  justify-content: center;/*水平居中*/
+}
+.window .user{
+  background-color: #fff;
+  width: 390rpx;
+  height: 130rpx;
+  border-radius: 65rpx;
+  position:absolute;
+  left: 40rpx;
+  top:50rpx;
+}
+.user .head-img {
+  width: 110rpx;
+  height: 110rpx;
+  border-radius: 50%;
+  display:block;
+  overflow:hidden;
+  margin: 10rpx ;
+  position:absolute;
+  left: 0rpx;
+}
+.user .rim{
+  background-color: #4dac96;
+  width: 130rpx;
+  height: 130rpx;
+  position:absolute;
+  border-radius: 50%;
+}
+.user .username{
+  font-size: 38rpx;
+  position:absolute;
+  left: 150rpx;
+  height:130rpx;
+  line-height: 130rpx;
+  color: #4dac96;
+}
+.focus-game{
+  /* border: 1rpx solid black; */
+  width: 100%;
+  height: 60%;
+  position:absolute;
+  top:230rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.focus-game .game{
+  margin-left: 10rpx;
+  margin-right: 10rpx;  
+  height: 100%;
+  width: 240rpx;
+  display: inline-block;
+}
+/* .game .triangle{
+  position: absolute;
+  bottom: 40rpx;
+  width: 0;
+  height: 0%;
+  border-left: 120rpx solid transparent;
+  border-right: 120rpx solid transparent;
+  border-top: 100rpx solid #4dac96;
+} */
+.game .rectangle{
+  position: absolute;
+  top: 0rpx;
+  /* background-color: #4dac96; */
+  width: 240rpx;
+  height: 95%;
+}
+.back{
+  width: 100%;
+  height: 100%;
+}
+.rectangle .circle{
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  position: absolute;
+  left: 10rpx;
+  top:130rpx;
+  border: 0rpx;
+}
+.circle .pacture{
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 50%;
+  display:block;
+  overflow:hidden;
+  position: absolute;
+  left: 0rpx;
+}
+.bottom{
+  position: absolute;
+  bottom: 0rpx;
+  left: 95rpx;
+  width: 560rpx;
+  /* border: 1rpx solid black; */
+  height: 100rpx;
+}
+.bottom .focus{
+  width: 275rpx;
+  height: 100rpx;
+  background-color: white;
+  position: absolute;
+  left: 0rpx;
+  bottom: 0rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  font-size: 22px;
+  color: #4dac96;
+  line-height: 100rpx;
+}
+.bottom .message{
+  width: 275rpx;
+  height: 100%;
+  background-color: #fff;
+  position: absolute;
+  right: 0rpx;
+  border-top-left-radius: 50rpx;
+  border-top-right-radius: 50rpx;
+  font-size: 22px;
+  color: #4dac96;
+  line-height: 100rpx;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

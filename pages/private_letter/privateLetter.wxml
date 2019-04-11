@@ -1,0 +1,87 @@
+<view class="messageBox">
+  <label>消息盒子</label>
+</view>
+<view class="body">
+  <!-- 信息一 -->
+  <block wx:for="{{userMessageList}}" wx:for-item='message' wx:key='message.uid'>
+  <van-swipe-cell id="swipe-cell" right-width="{{ 50 }}" async-close bind:close="onClose" data-uid='{{message.uid}}'>
+    <van-cell-group>
+      <view class="letter" bindtap='tapToMessage' data-uid='{{message.uid}}'data-nickname='{{message.nickname}}' data-headimgurl='{{message.headimgurl}}' >
+        <view class="{{message.hasRedPoint? 'notice':''}}"></view>
+        <view class="letter-top">
+          <image class="headImg" mode='scaleToFit' src="{{message.headimgurl}}"></image>
+          <view class="info">
+            <view class="mg-top-10"></view>
+            <text class="username">{{message.nickname}}</text>
+            <view class="time">{{message.latest}}</view>
+            <view class="clear"></view>
+            <view class="message">{{message.message}}</view>
+          </view>
+        </view>
+        <view class="letter-bottom"></view>
+      </view>
+    </van-cell-group>
+    <view class="delSize" slot="right">删除</view>
+  </van-swipe-cell>
+  </block>
+  <!-- 信息二 -->
+  <!-- <van-swipe-cell id="swipe-cell" right-width="{{ 50 }}" async-close bind:close="onClose">
+    <van-cell-group>
+      <view class="letter">
+        <view class="notice"></view>
+        <view class="letter-top">
+          <image class="headImg" mode='scaleToFit' src="/image/headImg2.jpg"></image>
+          <view class="info">
+            <view class="mg-top-10"></view>
+            <text class="username">我爸是泽鑫</text>
+            <view class="time">2018/12/14 14:50</view>
+            <view class="clear"></view>
+            <view class="message">让我带你飞，给我你微信</view>
+          </view>
+        </view>
+        <view class="letter-bottom"></view>
+      </view>
+    </van-cell-group>
+    <view class="delSize" slot="right">删除</view>
+  </van-swipe-cell> -->
+  <!-- 信息三 -->
+  <!-- <van-swipe-cell id="swipe-cell" right-width="{{ 50 }}" async-close bind:close="onClose">
+    <van-cell-group>
+      <view class="letter">
+        <view class="letter-top">
+          <image class="headImg" mode='scaleToFit' src="/image/headImg3.jpg"></image>
+          <view class="info">
+            <view class="mg-top-10"></view>
+            <text class="username">小宝爷</text>
+            <view class="time">2018/12/14 14:50</view>
+            <view class="clear"></view>
+            <view class="message">你现在什么段位</view>
+          </view>
+        </view>
+        <view class="letter-bottom"></view>
+      </view>
+    </van-cell-group>
+    <view class="delSize" slot="right">删除</view>
+  </van-swipe-cell> -->
+  <!-- 信息四 -->
+  <!-- <van-swipe-cell id="swipe-cell" right-width="{{ 50 }}" async-close bind:close="onClose">
+    <van-cell-group>
+      <view class="letter">
+        <view class="letter-top">
+          <image class="headImg" mode='scaleToFit' src="/image/headImg4.jpg"></image>
+          <view class="info">
+            <view class="mg-top-10"></view>
+            <text class="username">则疯他爹</text>
+            <view class="time">2018/12/14 14:50</view>
+            <view class="clear"></view>
+            <view class="message">come on!I will carry you!</view>
+          </view>
+        </view>
+        <view class="letter-bottom"></view>
+      </view>
+    </van-cell-group>
+    <view class="delSize" slot="right">删除</view>
+  </van-swipe-cell> -->
+</view>
+<!-- 弹框设置 -->
+<van-dialog id="van-dialog" />
